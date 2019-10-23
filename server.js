@@ -12,12 +12,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-io.on('connection', (client) => {
-  console.log("Web Socket connected");
-
-  client.emit("welcomeMessage", "Welcome to the app!");
-  io.emit("welcomeMessage", "Welcome to the app!");
-
+io.on('connection', client => {
+  console.log("Socket Connected");
+  client.on('newMessageFromClient', data => {
+    console.log(data);
+    io.emit('newMessageFromServer', data);
+  });
 });
 
 server.listen(PORT, () => {

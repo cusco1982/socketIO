@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
 
 <head>
@@ -12,21 +12,19 @@
 
 <body>
   <div class="jumbotron">
-    <h1 class="text-center">Best Chat App Ever!</h1>
+    <h1 class='text-center'> Best Chat App Ever</h1>
   </div>
-
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <div id="chatWindow"></div>
         <div class="form-group">
-          <label>New message</label>
-          <input class="form-control" id="messageInput"/>
-          <button class="btn btn-primary" id="sendMessage">Send message</button>
+          <label>New Message</label>
+          <input class="form-control" id="messsageInput" />
+          <button id="sendMessage" class="btn btn-primary">Send</button>
         </div>
       </div>
     </div>
-
   </div>
 
   <script src="socket.io-client/dist/socket.io.js"></script>
